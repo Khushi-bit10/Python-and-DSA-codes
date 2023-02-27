@@ -1,0 +1,4 @@
+n1=int(input())
+n2=int(input())
+mod=divmod(n1,n2)
+print(f'{mod[0]}\n{mod[1]}\n{mod}')
