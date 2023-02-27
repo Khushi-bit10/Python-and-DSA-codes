@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n,s,r = [],[],[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        r.append([name,score])
+        s.append(score)
+        
+    s = sorted(set(s))
+    SecLowScore = s[1]
+    
+    for i in range(len(r)):
+        if r[i][1] == SecLowScore:
+            n.append(r[i][0])
+    n.sort()   
+    for i in n:
+        print(i)
