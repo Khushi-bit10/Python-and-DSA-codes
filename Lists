@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    li=[]
+    N = int(input())
+    for i in range(N):
+        com, *line = input().split()
+        comm = list(map(int, line))
+        if com=="insert":
+            li.insert(comm[0],comm[1])
+        elif com=='remove':
+            li.remove(comm[0])
+        elif com=='append':
+            li.append(comm[0])
+        elif com=='sort':
+            li.sort()
+        elif com=='pop':
+            li.pop()
+        elif com=='reverse':
+            li.reverse()
+        elif com=='print':
+            print(li)
+    
