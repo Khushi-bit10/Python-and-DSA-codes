@@ -1,0 +1,12 @@
+s1,s2 = input().split()
+
+x='WELCOME'
+y='---'
+z='.|.'
+size = ((int(s1)-1)//2)
+top=size
+for i in range(size):
+    print(y*(top-i)+((2*(i+1))-1)*(z)+(y*(top-i)))
+print(x.center(int(s2),'-'))
+for i in range(size):
+    print(y*(i+1)+((2*(top-i))-1)*(z)+(y*(i+1)))
