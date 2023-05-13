@@ -1,0 +1,17 @@
+def print_formatted(number):
+    # your code goes here
+    dec,oc,he,bi= [],[],[],[]
+    for i in range(1,number+1):
+        dec.append(str(i))
+        oc.append(oct(i)[2:])
+        he.append(hex(i)[2:].upper())
+        bi.append(bin(i)[2:])
+    ad= len(bi[-1])
+    for i in range(number):
+        print(dec[i].rjust(ad),oc[i].rjust(ad),he[i].rjust(ad),bi[i].rjust(ad))
+    
+        
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
