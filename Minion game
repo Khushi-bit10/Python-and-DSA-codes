@@ -1,0 +1,25 @@
+VOWELS = 'AEIOU'
+def minion_game(string):
+    # your code goes here
+    
+    stew_score = 0
+    kev_score = 0
+    for i in range(0, len(string)):
+        points = len(string) - i
+        if string[i] in VOWELS:
+            kev_score += points
+        else:
+            stew_score += points
+
+    if stew_score > kev_score:
+        print(f"Stuart {stew_score}")
+    elif kev_score > stew_score:
+        print(f"Kevin {kev_score}")
+    else:
+        print("Draw")
+        
+    
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
