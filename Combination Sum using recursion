@@ -1,0 +1,19 @@
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        ans=[]
+        ds=[]
+        candidates.sort()
+        self.main(0,candidates,target,0,ans,ds)
+        return ans
+    def main(self,index,candidates,target,sum, ans,ds):
+        if sum==target:
+            ans.append(ds.copy())
+            return
+        if index==len(candidates):
+            return
+        if sum>target:
+            return
+        ds.append(candidates[index])
+        self.main(index,candidates,target,sum+candidates[index],ans,ds)
+        ds.pop()
+        self.main(index+1,candidates,target,sum,ans,ds)
