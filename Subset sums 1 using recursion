@@ -1,0 +1,14 @@
+class Solution:
+    def subsetSums(self, arr, N):
+        # code here
+        arr.sort()
+        ans=[]
+        def rec(i,sums):
+            if i==N:
+                ans.append(sums)
+                return 
+            rec(i+1,sums)
+            rec(i+1,sums+arr[i])
+            return 
+        rec(0,0)
+        return ans
